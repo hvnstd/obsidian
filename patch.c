@@ -131,7 +131,7 @@ void allocConsoleOnce() {
       freopen("CONOUT$", "wt", stdout);
     } else {
       freopen(consoleFile, "at", stdout);
-      puts("=== NEW SESSION ===");
+      puts("=== 新会话 ===");
     }
 
     hasAllocatedConsole = true;
@@ -140,7 +140,7 @@ void allocConsoleOnce() {
 
 void dumpStack() {
   allocConsoleOnce();
-  puts("*** STACK TRACE ***");
+  puts("*** 堆栈跟踪 ***");
 
   HANDLE base = GetModuleHandleW(NULL);
   LPVOID stack[16];
@@ -160,19 +160,19 @@ void _Noreturn _die(int line) {
 
   allocConsoleOnce();
 
-  printf("YumeKey Obsidian has encountered a fatal error.\n\n");
-  printf("Please include the below information in your report:\n");
+  printf("YumeKey Obsidian 遇到了一个致命错误。\n\n");
+  printf("请在您的报告中包含以下信息：\n");
   printf("@ lifeCycle: %s\n", _lifeCycle);
   printf("+ line: %d\n", line);
   printf("inDllMain = %s\n", inDllMain ? "true" : "false");
   printf("timeSinceInject = %d\n", GetTickCount() - injectTime);
-  printf("Obsidian version: %d.%d.%d in Synthesizer V Studio %s\n",
+  printf("Obsidian 版本：%d.%d.%d in Synthesizer V Studio %s\n",
          VER_MAJOR, VER_MINOR, VER_PATCH, synthVDetected ? synthVDetected : "(unknown)");
   system("ver");
   printf("\n");
   dumpStack();
 
-  printf("\nPress any key to exit...\n");
+  printf("\n按任意键退出...\n");
 
   _getch();
   ExitProcess(42);
@@ -284,7 +284,7 @@ static void hook_appVerifyProductKey(struct ProductBase *thisPtr, struct Functio
   thisPtr->isActivated = true;
   thisPtr->isFree = true;
   thisPtr->hasNoProductKey = true;
-  printf("Product name: %s, Product vendor: %s\n", thisPtr->name, thisPtr->vendor);
+  printf("产品名称：%s, 产品厂商：%s\n", thisPtr->name, thisPtr->vendor);
   orig_appVerifyProductKey(thisPtr, success, success);
 }
 
@@ -302,7 +302,7 @@ static WINAPI BOOL hook_GetVolumeInformationW(LPCWSTR lpRootPathName,
   if (!secondaryHooksReady) {
     if (checkSynthVVersion) {
       LIFECYCLE("CHECK_VERSION");
-      printf("[Obsidian] Running compatibility check...\n");
+      printf("[Obsidian] 正在运行兼容性检查...\n");
 
       const char *svVer = NULL;
       for (int i = 0; i < 3; i++) {
@@ -311,7 +311,7 @@ static WINAPI BOOL hook_GetVolumeInformationW(LPCWSTR lpRootPathName,
         if (!svVer) {
           if (safeMemMem(GetCurrentProcess(), GetProcessHeap(), 64 * 1024 * 1024, "Basic 1.", sizeof("Basic 1.") - 1)) {
             allocConsoleOnce();
-            printf("[Obsidian] Synthesizer V Studio Basic is not supported. This program will now exit.\n\n");
+            printf("[Obsidian] Synthesizer V Studio Basic 不受支持。本程序现在将退出。\n\n");
             die();
           }
         } else {
@@ -323,11 +323,11 @@ static WINAPI BOOL hook_GetVolumeInformationW(LPCWSTR lpRootPathName,
 
       if (!svVer) {
         allocConsoleOnce();
-        printf("Failed to detect Synthesizer V Studio version.\n\n");
+        printf("无法检测 Synthesizer V Studio 版本。\n\n");
         die();
       }
 
-      printf("[Obsidian] Loaded into Synthesizer V Studio %s\n", svVer);
+      printf("[Obsidian] 已加载到 Synthesizer V Studio %s\n", svVer);
       synthVDetected = svVer;
 
       if (!strstr(synthVSupportedVersions, svVer)) {
@@ -337,15 +337,15 @@ static WINAPI BOOL hook_GetVolumeInformationW(LPCWSTR lpRootPathName,
         }
 
         allocConsoleOnce();
-        printf("[Obsidian] Synthesizer V Studio %s is NOT SUPPORTED. If you continue, there may be problems!\n\n");
+        printf("[Obsidian] Synthesizer V Studio %s 不受支持！如果您继续，可能会出现问题！\n\n");
         printf("\n\n");
-        printf("Press any key to continue anyway...\n");
+        printf("按任意键继续...\n");
         _getch();
       }
     }
 
     LIFECYCLE("INIT_HOOKS_2");
-    printf("[Obsidian] Initializing secondary hooks...\n");
+    printf("[Obsidian] 正在初始化次要钩子...\n");
 
     if (fptrAddBase == 1) {
       fptrAddBase = (uintptr_t)GetModuleHandleW(NULL);
@@ -355,73 +355,73 @@ static WINAPI BOOL hook_GetVolumeInformationW(LPCWSTR lpRootPathName,
     SIZE_T exeSize = 64 * 1024 * 1024;
 
     if (getActivationStatusFPtr != NULL) {
-      debug_printf("[Obsidian] Using getActivationStatus function offset %p + %p.\n", getActivationStatusFPtr, fptrAddBase);
+      debug_printf("[Obsidian] 使用 getActivationStatus 函数偏移 %p + %p。\n", getActivationStatusFPtr, fptrAddBase);
       getActivationStatusFPtr += fptrAddBase;
     } else {
-      debug_printf("[Obsidian] Attempting to autodetect getActivationStatus function...\n");
+      debug_printf("[Obsidian] 正在尝试自动检测 getActivationStatus 函数...\n");
       getActivationStatusFPtr = safeMemMem(GetCurrentProcess(), exeBase, exeSize, getActivationStatusFSig, getActivationStatusFSigSize);
       if (!getActivationStatusFPtr) {
         allocConsoleOnce();
-        debug_printf("Failed to autodetect and initialize required getActivationStatus patch.\n\n");
+        debug_printf("无法自动检测和初始化所需的 getActivationStatus 补丁。\n\n");
         die();
       }
     }
 
-    debug_printf("[Obsidian] getActivationStatus function @ %p\n", getActivationStatusFPtr);
+    debug_printf("[Obsidian] getActivationStatus 函数位于 %p\n", getActivationStatusFPtr);
 
     if (voiceDBVerifyProductKeyFPtr != NULL) {
-      debug_printf("[Obsidian] Using voiceDBVerifyProductKey function offset %p + %p.\n", voiceDBVerifyProductKeyFPtr, fptrAddBase);
+      debug_printf("[Obsidian] 使用 voiceDBVerifyProductKey 函数偏移 %p + %p。\n", voiceDBVerifyProductKeyFPtr, fptrAddBase);
       voiceDBVerifyProductKeyFPtr += fptrAddBase;
     } else {
-      debug_printf("[Obsidian] Attempting to autodetect voiceDBVerifyProductKey function...\n");
+      debug_printf("[Obsidian] 正在尝试自动检测 voiceDBVerifyProductKey 函数...\n");
       voiceDBVerifyProductKeyFPtr = safeMemMem(GetCurrentProcess(), exeBase, exeSize, voiceDBVerifyProductKeyFSig, voiceDBVerifyProductKeyFSigSize);
       if (!voiceDBVerifyProductKeyFPtr) {
         allocConsoleOnce();
-        debug_printf("Failed to autodetect and initialize required voiceDBVerifyProductKey patch.\n\n");
+        debug_printf("无法自动检测和初始化所需的 voiceDBVerifyProductKey 补丁。\n\n");
         die();
       }
     }
 
-    debug_printf("[Obsidian] voiceDBVerifyProductKey function @ %p\n", voiceDBVerifyProductKeyFPtr);
+    debug_printf("[Obsidian] voiceDBVerifyProductKey 函数位于 %p\n", voiceDBVerifyProductKeyFPtr);
 
     if (appVerifyProductKeyFPtr != NULL) {
-      debug_printf("[Obsidian] Using appVerifyProductKey function offset %p + %p.\n", appVerifyProductKeyFPtr, fptrAddBase);
+      debug_printf("[Obsidian] 使用 appVerifyProductKey 函数偏移 %p + %p。\n", appVerifyProductKeyFPtr, fptrAddBase);
       appVerifyProductKeyFPtr += fptrAddBase;
     } else {
-      debug_printf("[Obsidian] Attempting to autodetect appVerifyProductKey function...\n");
+      debug_printf("[Obsidian] 正在尝试自动检测 appVerifyProductKey 函数...\n");
 
       LPVOID searchBase = exeBase;
       if (appVerifyProductKeyFSigSize <= voiceDBVerifyProductKeyFSigSize &&
           !memCmpWithMask(voiceDBVerifyProductKeyFSig, appVerifyProductKeyFSig, appVerifyProductKeyFSigSize)) {
         searchBase = voiceDBVerifyProductKeyFPtr + voiceDBVerifyProductKeyFSigSize;
-        debug_printf("[Obsidian] Starting search at %p.\n", searchBase);
+        debug_printf("[Obsidian] 从 %p 开始搜索。\n", searchBase);
       }
 
       appVerifyProductKeyFPtr = safeMemMem(GetCurrentProcess(), searchBase, exeSize, appVerifyProductKeyFSig, appVerifyProductKeyFSigSize);
       if (!appVerifyProductKeyFPtr) {
         allocConsoleOnce();
-        debug_printf("Failed to autodetect and initialize required appVerifyProductKey patch.\n\n");
+        debug_printf("无法自动检测和初始化所需的 appVerifyProductKey 补丁。\n\n");
         die();
       }
     }
 
-    debug_printf("[Obsidian] appVerifyProductKey function @ %p\n", appVerifyProductKeyFPtr);
+    debug_printf("[Obsidian] appVerifyProductKey 函数位于 %p\n", appVerifyProductKeyFPtr);
 
     if (setOkFlagFPtr != NULL) {
-      debug_printf("[Obsidian] Using setOkFlag function offset %p + %p.\n", setOkFlagFPtr, fptrAddBase);
+      debug_printf("[Obsidian] 使用 setOkFlag 函数偏移 %p + %p。\n", setOkFlagFPtr, fptrAddBase);
       setOkFlagFPtr += fptrAddBase;
     } else {
-      debug_printf("[Obsidian] Attempting to autodetect setOkFlag function...\n");
+      debug_printf("[Obsidian] 正在尝试自动检测 setOkFlag 函数...\n");
       setOkFlagFPtr = safeMemMem(GetCurrentProcess(), exeBase, exeSize, setOkFlagFSig, setOkFlagFSigSize);
       if (!setOkFlagFPtr) {
         allocConsoleOnce();
-        debug_printf("Failed to autodetect and call setOkFlag.\n\n");
+        debug_printf("无法自动检测和调用 setOkFlag。\n\n");
         die();
       }
       while (*(uint8_t*)setOkFlagFPtr == 0xcc) setOkFlagFPtr++;
     }
 
-    debug_printf("[Obsidian] setOkFlag function @ %p\n", setOkFlagFPtr);
+    debug_printf("[Obsidian] setOkFlag 函数位于 %p\n", setOkFlagFPtr);
     void (*setOkFlag)() = setOkFlagFPtr;
     setOkFlag();
 
@@ -441,7 +441,7 @@ static WINAPI BOOL hook_GetVolumeInformationW(LPCWSTR lpRootPathName,
     }
 
     secondaryHooksReady = true;
-    printf("[Obsidian] Secondary hooks ready.\n");
+    printf("[Obsidian] 次要钩子已就绪。\n");
     LIFECYCLE("RUNNING");
   }
 
@@ -458,12 +458,12 @@ static bool initConfig() {
   WCHAR *baseName = wcsrchr(configPath, '\\');
   wcscpy(baseName + 1, L"obsidian.ini");
 
-  printf("[Obsidian] Trying config file: ");
+  printf("[Obsidian] 正在尝试读取配置文件：");
   _putws(configPath);
 
   FILE *fp = _wfopen(configPath, L"r");
   if (!fp) {
-    printf("[Obsidian] No config file.\n");
+    printf("[Obsidian] 未找到配置文件。\n");
     goto skip;
   }
 
@@ -488,21 +488,21 @@ static bool initConfig() {
 
     len = strlen(l);
 
-    printf("[Obsidian] Parsing config line: %s\n", l);
+    printf("[Obsidian] 正在解析配置行：%s\n", l);
 
     char *nBuf = malloc(len);
     strcpy(nBuf, l);
 
     char *eq = strchr(l, '=');
     if (!eq) {
-      printf("[Obsidian] Invalid configuration line: %s\n", l);
+      printf("[Obsidian] 无效的配置行：%s\n", l);
       free(nBuf);
       continue;
     }
 
     *eq = '\0';
     if (getenv(l)) {
-      printf("[Obsidian] Skipping: not overriding environment variable.\n");
+      printf("[Obsidian] 跳过：不覆盖环境变量。\n");
       free(nBuf);
       continue;
     }
@@ -511,7 +511,7 @@ static bool initConfig() {
   }
 
 skip:
-  printf("[Obsidian] Initializing configuration from environment...\n");
+  printf("[Obsidian] 正在从环境变量初始化配置...\n");
 
   if (getenv("OBSIDIAN_BASE_ADDR")) {
     fptrAddBase = strtoull(getenv("OBSIDIAN_BASE_ADDR"), NULL, 0);
@@ -571,7 +571,7 @@ skip:
     allocConsoleOnce();
   }
 
-  printf("[Obsidian] Configuration loaded.\n");
+  printf("[Obsidian] 配置已加载。\n");
 
   return true;
 }
@@ -621,13 +621,13 @@ __declspec(dllexport) BOOL WINAPI DllMain(
 
       if (debugMode) {
         allocConsoleOnce();
-        printf("(%p) YumeKey Obsidian %d.%d.%d initializing...\n", thisDll, VER_MAJOR, VER_MINOR, VER_PATCH);
-        printf("Copyright (C) 2023-2024 YumeCorp International. All rights reserved.\n");
-        printf("*** IF YOU PAID FOR THIS SOFTWARE, YOU'VE BEEN SCAMMED! ***\n");
+        printf("(%p) YumeKey Obsidian %d.%d.%d 正在初始化...\n", thisDll, VER_MAJOR, VER_MINOR, VER_PATCH);
+        printf("版权所有 (C) 2023-2024 YumeCorp International。保留所有权利。\n");
+        printf("*** 如果您为此软件付费，您已被诈骗！***\n");
 
         WCHAR dllPathW[MAX_PATH];
         GetModuleFileNameW(thisDll, dllPathW, sizeof(dllPathW) / sizeof(WCHAR));
-        printf("[Obsidian] Path: ");
+        printf("[Obsidian] 路径：");
         _putws(dllPathW);
       }
 
@@ -647,18 +647,18 @@ __declspec(dllexport) BOOL WINAPI DllMain(
 
       LIFECYCLE("PRE_INIT_HOOKS_2");
       if (debugMode > 0 && !earlyDebug) {
-        printf("[Obsidian] Some debug messages from before configuration was loaded were hidden. "
-               "Set the environment variable OBSIDIAN_DEBUG_MODE before launching in order to see them.");
-        printf("[Obsidian] Current version: %d.%d.%d\n", VER_MAJOR, VER_MINOR, VER_PATCH);
+        printf("[Obsidian] 配置加载之前的一些调试消息已被隐藏。"
+               "请在启动前设置环境变量 OBSIDIAN_DEBUG_MODE 以查看它们。");
+        printf("[Obsidian] 当前版本：%d.%d.%d\n", VER_MAJOR, VER_MINOR, VER_PATCH);
       }
 
 #ifndef DEBUG
       if (debugMode) {
-        printf("[Obsidian] Debug mode: not supported in release builds.\n");
+        printf("[Obsidian] 调试模式：在发布版本中不受支持。\n");
       }
 #endif
 
-      printf("[Obsidian] Ready.\n");
+      printf("[Obsidian] 已就绪。\n");
       inDllMain = false;
 
       break;
@@ -666,7 +666,7 @@ __declspec(dllexport) BOOL WINAPI DllMain(
       MH_DisableHook(MH_ALL_HOOKS);
       MH_Uninitialize();
 
-      printf("[Obsidian] Detaching...\n");
+      printf("[Obsidian] 正在分离...\n");
       DeleteAtom(FindAtomA("Obsidian"));
   }
 
