@@ -1,52 +1,51 @@
-=== YumeKey 3 Release ===
+=== YumeKey 3 发布版 ===
 
-YumeKey 3 (codename: Obsidian) disables activation requirements for Synthesizer V Studio Pro
-and voicebanks.
+YumeKey 3（代号：黑曜石/Obsidian）可禁用 Synthesizer V Studio Pro
+及歌声库的激活要求。
 
-You do not need to own Synthesizer V Studio Pro or any voicebanks.
+您无需拥有 Synthesizer V Studio Pro 或任何歌声库。
 
-For more information on YumeKey, see https://jinpwnsoft.re or email support@jinpwnsoft.re
-YumeKey is and always will be free. If you paid for this software, then you've been scammed.
+有关 YumeKey 的更多信息，请访问 https://jinpwnsoft.re 或发送电子邮件至 support@jinpwnsoft.re
+YumeKey 现在是并且将来也永远是免费的。如果您为此软件付费，那么您已被诈骗。
 
-Setup instructions:
+安装说明：
 
-1. Copy "obsidian.exe" and "obsidian.dll" to the Synthesizer V Studio Pro install path,
-   usually "C:\Program Files\Synthesizer V Studio Pro" or similar.
+1. 将 "obsidian.exe" 和 "obsidian.dll" 复制到 Synthesizer V Studio Pro 的安装路径，
+   通常为 "C:\Program Files\Synthesizer V Studio Pro" 或类似路径。
 
-2. Optionally create "obsidian.ini" in that same path for configuration (see below).
+2. （可选）在同一路径下创建 "obsidian.ini" 以进行配置（见下文）。
 
-3. Use "obsidian.exe" to open Synthesizer V Studio Pro and install any voice database you want.
+3. 使用 "obsidian.exe" 打开 Synthesizer V Studio Pro 并安装任何您想要的歌声数据库。
 
-Limitations:
+限制：
 
-* You should deactivate your purchased voicebanks before, to avoid losing activation code uses
-  by accidental uninstallation.
+* 在此之前，您应该停用已购买的歌声库，以避免因意外卸载而失去激活码使用次数。
 
-* Tested with Synthesizer V Studio Pro 1.11.0 through 1.11.2.
+* 已在 Synthesizer V Studio Pro 1.11.0 至 1.11.2 版本上测试。
 
-* No VST support yet. Planned for later.
+* 暂不支持 VST。计划在未来添加。
 
-Configuration (ADVANCED):
+配置（高级）：
 
-You can use any of these options in obsidian.ini, or you can set them as environment variables
-before launching Synthesizer V Studio.
+您可以在 obsidian.ini 中使用以下任何选项，或者在启动 Synthesizer V Studio 之前
+将它们设置为环境变量。
 
-; Base address of SynthV module (1 - use default; otherwise use specified)
+; SynthV 模块基地址（1 - 使用默认值；否则使用指定值）
 OBSIDIAN_BASE_ADDR=1
-; Debug mode (0 - nothing, 1 - enabled, 2 - verbose)
+; 调试模式（0 - 无，1 - 启用，2 - 详细）
 OBSIDIAN_DEBUG_MODE=0
-; Console file, to save logs if debug mode is enabled.
+; 控制台文件，用于在启用调试模式时保存日志。
 OBSIDIAN_CONSOLE_FILE=C:\path\to\log\file.txt
-; Block Internet access for SynthV.
+; 阻止 SynthV 访问互联网。
 OBSIDIAN_BLOCK_INTERNET=1
-; Check SynthV version for compatibility.
+; 检查 SynthV 版本以确保兼容性。
 OBSIDIAN_CHECK_SYNTHV_VERSION=1
 
-If you were to set these in the environment, you can set them globally via Windows settings or
-at a command prompt:
+如果您要在环境中设置这些选项，可以通过 Windows 设置全局设置，或在命令提示符处设置：
 
 C:\Program Files\Synthesizer V Studio Pro> set OBSIDIAN_DEBUG_MODE=2
 
 C:\Program Files\Synthesizer V Studio Pro> obsidian.exe
 
-Environment variables override config file options.
+环境变量会覆盖配置文件选项。
+
