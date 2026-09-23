@@ -1,0 +1,682 @@
+cl cl
+a a
+u u
+e e
+o o
+á a
+é e
+í i
+ó o
+ü U
+ú u
+f f
+k k
+l l
+ll ll
+m m
+ñ J
+p p
+q k
+t t
+z s
+rr rr
+lr l rr
+nr n rr
+sr s rr
+r r
+ch ch
+cu k U
+c s
+ab a B
+eb e B
+ib i B
+ob o B
+ub u B
+áb a B
+éb e B
+íb i B
+ób o B
+úb u B
+b b
+ad a D
+ed e D
+id i D
+od o D
+ud u D
+ád a D
+éd e D
+íd i D
+ód o D
+úd u D
+d d
+ge x e
+gi x i
+g g
+gu g
+qu k
+nv m b
+av a B
+ev e B
+iv i B
+ov o B
+uv u B
+áv a B
+év e B
+ív i B
+óv o B
+úv u B
+v b
+sb z b
+sd z d
+sg z g
+sll s ll
+sl z l
+sm z m
+sn z n
+snv s m b
+s s
+uw u B
+w U
+Mexico m e x i k o
+mexico m e x i k o
+texas t e x a s
+Texas t e x a s
+Oaxaca U a x a c a
+oaxaca U a x a c a
+Xela sh e l a
+xela sh e l a
+axa a k s a
+exa e k s a
+ixa i k s a
+aixa a I k s a
+eixa e I k s a
+oixa o I k s a
+oxa o k s a
+uxa u k s a
+auxa a U k s a
+ouxa o U k s a
+euxa e U k s a
+áxa a k s a
+éxa e k s a
+íxa i k s a
+óxa o k s a
+úxa u k s a
+axe a k s e
+exe e k s e
+ixe i k s e
+aixe a I k s e
+eixe e I k s e
+oixe o I k s e
+oxe o k s e
+uxe u k s e
+auxe a U k s e
+ouxe o U k s e
+euxe e U k s e
+áxe a k s e
+éxe e k s e
+íxe i k s e
+óxe o k s e
+úxe u k s e
+axi a k s i
+exi e k s i
+ixi i k s i
+aixi a I k s i
+eixi e I k s i
+oixi o I k s i
+oxi o k s i
+uxi u k s i
+auxi a U k s i
+ouxi o U k s i
+euxi e U k s i
+áxi a k s i
+éxi e k s i
+íxi i k s i
+óxi o k s i
+úxi u k s i
+axo a k s o
+exo e k s o
+ixo i k s o
+aixo a I k s o
+eixo e I k s o
+oixo o I k s o
+oxo o k s o
+uxo u k s o
+auxo a U k s o
+ouxo o U k s o
+euxo e U k s o
+áxo a k s o
+éxo e k s o
+íxo i k s o
+óxo o k s o
+úxo u k s o
+axu a k s u
+exu e k s u
+ixu i k s u
+aixu a I k s u
+eixu e I k s u
+oixu o I k s u
+oxu o k s u
+uxu u k s u
+auxu a U k s u
+ouxu o U k s u
+euxu e U k s u
+áxu a k s u
+éxu e k s u
+íxu i k s u
+óxu o k s u
+úxu u k s u
+axú a k s u
+exú e k s u
+ixú i k s u
+aixú a I k s u
+eixú e I k s u
+oixú o I k s u
+oxú o k s u
+uxú u k s u
+auxú a U k s u
+ouxú o U k s u
+euxú e U k s u
+áxú a k s u
+éxú e k s u
+íxú i k s u
+óxú o k s u
+úxú u k s u
+axó a k s o
+exó e k s o
+ixó i k s o
+aixó a I k s o
+eixó e I k s o
+oixó o I k s o
+oxó o k s o
+uxó u k s o
+auxó a U k s o
+ouxó o U k s o
+euxó e U k s o
+áxó a k s o
+éxó e k s o
+íxó i k s o
+óxó o k s o
+úxó u k s o
+axá a k s a
+exá e k s a
+ixá i k s a
+aixá a I k s a
+eixá e I k s a
+oixá o I k s a
+oxá o k s a
+uxá u k s a
+auxá a U k s a
+ouxá o U k s a
+euxá e U k s a
+áxá a k s a
+éxá e k s a
+íxá i k s a
+óxá o k s a
+úxá u k s a
+axé a k s e
+exé e k s e
+ixé i k s e
+aixé a I k s e
+eixé e I k s e
+oixé o I k s e
+oxé o k s e
+uxé u k s e
+auxé a U k s e
+ouxé o U k s e
+euxé e U k s e
+áxé a k s e
+éxé e k s e
+íxé i k s e
+óxé o k s e
+úxé u k s e
+axí a k s i
+exí e k s i
+ixí i k s i
+així a I k s i
+eixí e I k s i
+oixí o I k s i
+oxí o k s i
+uxí u k s i
+auxí a U k s i
+ouxí o U k s i
+euxí e U k s i
+áxí a k s i
+éxí e k s i
+íxí i k s i
+óxí o k s i
+úxí u k s i
+axiu a k s I u
+exiu e k s I u
+ixiu i k s I u
+aixiu a I k s I u
+eixiu e I k s I u
+oixiu o I k s I u
+oxiu o k s I u
+uxiu u k s I u
+auxiu a U k s I u
+ouxiu o U k s I u
+euxiu e U k s I u
+áxiu a k s I u
+éxiu e k s I u
+íxiu i k s I u
+óxiu o k s I u
+úxiu u k s I u
+axia a k s I a
+exia e k s I a
+ixia i k s I a
+aixia a I k s I a
+eixia e I k s I a
+oixia o I k s I a
+oxia o k s I a
+uxia u k s I a
+auxia a U k s I a
+ouxia o U k s I a
+euxia e U k s I a
+áxia a k s I a
+éxia e k s I a
+íxia i k s I a
+óxia o k s I a
+úxia u k s I a
+axie a k s I e
+exie e k s I e
+ixie i k s I e
+aixie a I k s I e
+eixie e I k s I e
+oixie o I k s I e
+oxie o k s I e
+uxie u k s I e
+auxie a U k s I e
+ouxie o U k s I e
+euxie e U k s I e
+áxie a k s I e
+éxie e k s I e
+íxie i k s I e
+óxie o k s I e
+úxie u k s I e
+axio a k s I o
+exio e k s I o
+ixio i k s I o
+aixio a I k s I o
+eixio e I k s I o
+oixio o I k s I o
+oxio o k s I o
+uxio u k s I o
+auxio a U k s I o
+ouxio o U k s I o
+euxio e U k s I o
+áxio a k s I o
+éxio e k s I o
+íxio i k s I o
+óxio o k s I o
+úxio u k s I o
+axau a k s a U
+exau e k s a U
+ixau i k s a U
+aixau a I k s a U
+eixau e I k s a U
+oixau o I k s a U
+oxau o k s a U
+uxau u k s a U
+auxau a U k s a U
+ouxau o U k s a U
+euxau e U k s a U
+áxau a k s a U
+éxau e k s a U
+íuxau i k s a U
+óxau o k s a U
+úxau u k s a U
+axeu a k s e U
+exeu e k s e U
+ixeu i k s e U
+aixeu a I k s e U
+eixeu e I k s e U
+oixeu o I k s e U
+oxeu o k s e U
+uxeu u k s e U
+auxeu a U k s e U
+ouxeu o U k s e U
+euxeu e U k s e U
+áxeu a k s e U
+éxeu e k s e U
+íuxeu i k s e U
+óxeu o k s e U
+úxeu u k s e U
+axou a k s o U
+exou e k s o U
+ixou i k s o U
+aixou a I k s o U
+eixou e I k s o U
+oixou o I k s o U
+oxou o k s o U
+uxou u k s o U
+auxou a U k s o U
+ouxou o U k s o U
+euxou e U k s o U
+áxou a k s o U
+éxou e k s o U
+íuxou i k s o U
+óxou o k s o U
+úxou u k s o U
+ay a I
+ey e I
+iy i I
+oy o I
+uy u I
+áy a I
+éy e I
+íy i I
+óy o I
+úy u I
+y I
+ya y a
+ye y e
+yi y i
+yo y o
+yu y u
+yá y a
+yé y e
+yí y i
+yó y o
+yú y u
+aya a y a
+eya e y a
+iya i y a
+aiya a I y a
+eiya e I y a
+oiya o I y a
+oya o y a
+uya u y a
+auya a U y a
+ouya o U y a
+euya e U y a
+áya a y a
+éya e y a
+íya i y a
+óya o y a
+úya u y a
+aye a y e
+eye e y e
+iye i y e
+aiye a I y e
+eiye e I y e
+oiye o I y e
+oye o y e
+uye u y e
+auye a U y e
+ouye o U y e
+euye e U y e
+áye a y e
+éye e y e
+íye i y e
+óye o y e
+úye u y e
+ayi a y i
+eyi e y i
+iyi i y i
+aiyi a I y i
+eiyi e I y i
+oiyi o I y i
+oyi o y i
+uyi u y i
+auyi a U y i
+ouyi o U y i
+euyi e U y i
+áyi a y i
+éyi e y i
+íyi i y i
+óyi o y i
+úyi u y i
+ayo a y o
+eyo e y o
+iyo i y o
+aiyo a I y o
+eiyo e I y o
+oiyo o I y o
+oyo o y o
+uyo u y o
+auyo a U y o
+ouyo o U y o
+euyo e U y o
+áyo a y o
+éyo e y o
+íyo i y o
+óyo o y o
+úyo u y o
+ayu a y u
+eyu e y u
+iyu i y u
+aiyu a I y u
+eiyu e I y u
+oiyu o I y u
+oyu o y u
+uyu u y u
+auyu a U y u
+ouyu o U y u
+euyu e U y u
+áyu a y u
+éyu e y u
+íyu i y u
+óyu o y u
+úyu u y u
+ayú a y u
+eyú e y u
+iyú i y u
+aiyú a I y u
+eiyú e I y u
+oiyú o I y u
+oyú o y u
+uyú u y u
+auyú a U y u
+ouyú o U y u
+euyú e U y u
+áyú a y u
+éyú e y u
+íyú i y u
+óyú o y u
+úyú u y u
+ayó a y o
+eyó e y o
+iyó i y o
+aiyó a I y o
+eiyó e I y o
+oiyó o I y o
+oyó o y o
+uyó u y o
+auyó a U y o
+ouyó o U y o
+euyó e U y o
+áyó a y o
+éyó e y o
+íyó i y o
+óyó o y o
+úyó u y o
+ayá a y a
+eyá e y a
+iyá i y a
+aiyá a I y a
+eiyá e I y a
+oiyá o I y a
+oyá o y a
+uyá u y a
+auyá a U y a
+ouyá o U y a
+euyá e U y a
+áyá a y a
+éyá e y a
+íyá i y a
+óyá o y a
+úyá u y a
+ayé a y e
+eyé e y e
+iyé i y e
+aiyé a I y e
+eiyé e I y e
+oiyé o I y e
+oyé o y e
+uyé u y e
+auyé a U y e
+ouyé o U y e
+euyé e U y e
+áyé a y e
+éyé e y e
+íyé i y e
+óyé o y e
+úyé u y e
+ayí a y i
+eyí e y i
+iyí i y i
+aiyí a I y i
+eiyí e I y i
+oiyí o I y i
+oyí o y i
+uyí u y i
+auyí a U y i
+ouyí o U y i
+euyí e U y i
+áyí a y i
+éyí e y i
+íyí i y i
+óyí o y i
+úyí u y i
+ayiu a y I u
+eyiu e y I u
+iyiu i y I u
+aiyiu a I y I u
+eiyiu e I y I u
+oiyiu o I y I u
+oyiu o y I u
+uyiu u y I u
+auyiu a U y I u
+ouyiu o U y I u
+euyiu e U y I u
+áyiu a y I u
+éyiu e y I u
+íyiu i y I u
+óyiu o y I u
+úyiu u y I u
+ayia a y I a
+eyia e y I a
+iyia i y I a
+aiyia a I y I a
+eiyia e I y I a
+oiyia o I y I a
+oyia o y I a
+uyia u y I a
+auyia a U y I a
+ouyia o U y I a
+euyia e U y I a
+áyia a y I a
+éyia e y I a
+íyia i y I a
+óyia o y I a
+úyia u y I a
+ayie a y I e
+eyie e y I e
+iyie i y I e
+aiyie a I y I e
+eiyie e I y I e
+oiyie o I y I e
+oyie o y I e
+uyie u y I e
+auyie a U y I e
+ouyie o U y I e
+euyie e U y I e
+áyie a y I e
+éyie e y I e
+íyie i y I e
+óyie o y I e
+úyie u y I e
+ayio a y I o
+eyio e y I o
+iyio i y I o
+aiyio a I y I o
+eiyio e I y I o
+oiyio o I y I o
+oyio o y I o
+uyio u y I o
+auyio a U y I o
+ouyio o U y I o
+euyio e U y I o
+áyio a y I o
+éyio e y I o
+íyio i y I o
+óyio o y I o
+úyio u y I o
+ayau a y a U
+eyau e y a U
+iyau i y a U
+aiyau a I y a U
+eiyau e I y a U
+oiyau o I y a U
+oyau o y a U
+uyau u y a U
+auyau a U y a U
+ouyau o U y a U
+euyau e U y a U
+áyau a y a U
+éyau e y a U
+íuyau i y a U
+óyau o y a U
+úyau u y a U
+ayeu a y e U
+eyeu e y e U
+iyeu i y e U
+aiyeu a I y e U
+eiyeu e I y e U
+oiyeu o I y e U
+oyeu o y e U
+uyeu u y e U
+auyeu a U y e U
+ouyeu o U y e U
+euyeu e U y e U
+áyeu a y e U
+éyeu e y e U
+íuyeu i y e U
+óyeu o y e U
+úyeu u y e U
+ayou a y o U
+eyou e y o U
+iyou i y o U
+aiyou a I y o U
+eiyou e I y o U
+oiyou o I y o U
+oyou o y o U
+uyou u y o U
+auyou a U y o U
+ouyou o U y o U
+euyou e U y o U
+áyou a y o U
+éyou e y o U
+íuyou i y o U
+óyou o y o U
+úyou u y o U
+ia I a
+ie I e
+io I o
+iu I u
+ei e I
+oi o I
+ai a I
+iá I a
+ié I e
+ió I o
+iú I u
+éi e I
+ói o I
+ái a I
+úi u I
+i i
+u u
+ua U a
+ue U e
+ui U i
+uo U o
+uá U a
+ué U e
+uó U o
+uí U i
+nk N k
+nco N k o
+nca N k a
+nce N k e
+nku N k u
